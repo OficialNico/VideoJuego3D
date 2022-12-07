@@ -6,6 +6,8 @@ public class PayerMovement : MonoBehaviour
 {
     CharacterController characterController;
 
+    public short monedas;
+
     public float velocidad_caminar=6.0f;
 
     public float velocidad_correr=10.0f;
@@ -50,6 +52,8 @@ public class PayerMovement : MonoBehaviour
         movimiento.y -= gravedad * Time.deltaTime;
 
         characterController.Move(movimiento*Time.deltaTime);
+
+        GameContoller.monedas=monedas;
 
     }
 
